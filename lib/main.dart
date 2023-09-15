@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/home_layout/home_layout.dart';
+import 'package:news_app/splash_screen/splash_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        initialRoute: HomeLayout.routeName,
-        routes: {
-          HomeLayout.routeName: (context) => HomeLayout(),
-        });
+      debugShowCheckedModeBanner: false,
+      title: 'Your App Title',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: SplashScreen(),
+    );
   }
 }
